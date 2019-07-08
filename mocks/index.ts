@@ -11,7 +11,7 @@ const SOAP_API_PATH = '/HolidayService_v2/HolidayService2.asmx?WSDL';
 export const setupMockWSDL = () =>
   nock(SOAP_API_HOST)
     .get(SOAP_API_PATH)
-    .replyWithFile(200, path.join(__dirname, '../mocks/wsdl.xml'));
+    .replyWithFile(200, path.join(__dirname, './wsdl.xml'));
 
 /**
  * Mocks the `GetCountriesAvailable` SOAP action, causing it to return the specified `code` and `description`
